@@ -1,0 +1,66 @@
+/* Sidebar.css */
+.sidebar {
+    width: 270px;
+    background-color: #a69bd8;
+    color: #080808;  /* Set default text color to white */
+    height: 100vh;  /* Full height of the viewport */
+    position: fixed;  /* Fixes the sidebar to the left */
+}
+
+.sidebar ul {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 70px;
+    cursor: pointer;
+    display: flex;  /* Align items horizontally */
+    align-items: center;   /* Center items vertically */
+}
+
+.sidebar ul li .sidebar-icon {
+    margin-right: 15px;  /* Space between icon and text */
+    min-width: 25px;  /* Ensure icons have a fixed width */
+    text-align: center;   /* Center align icons */
+}
+
+.sidebar ul li a .sidebar-icon {
+    margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #9789e7;
+}
+
+.sidebar-logo {
+    height: 70px;
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+/* Light Mode Styles */
+/* body.light-mode {
+    background-color: #ffffff;
+    color: #080808;
+}
+
+body.light-mode .sidebar ul li:hover {
+    background-color: #9789e7;
+} */
+
+/* Dark Mode Styles */
+/* body.dark-mode {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+.dark-mode .sidebar {
+    background-color: #0501167a;
+    color: #f0f0f0;
+}
+
+body.dark-mode .sidebar ul li:hover {
+    background-color: #555555;
+} */

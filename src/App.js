@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Sidebar from './UI/Components/Sidebar';
+import Navbar from './UI/Components/Navbar';
+import './App.css'; // Import CSS for styling
+import Contentarea from './UI/Components/Contentarea';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [darkMode, setDarkMode] = useState(false);
+
+    const toggleTheme = () => {
+        setDarkMode(!darkMode);
+    };
+
+    return (
+        <div className={`app ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+            <Sidebar darkMode={darkMode} toggleTheme={toggleTheme} />
+            <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+            <Contentarea darkMode={darkMode} toggleTheme={toggleTheme} />
+            {/* Main content goes here */}
+        </div>
+    );
 }
 
 export default App;

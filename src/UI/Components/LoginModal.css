@@ -1,0 +1,90 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position the form-container relative to the content-area */
+  top: 55%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-37%, -50%); /* Center both horizontally and vertically */
+  width: 500px;
+  height: auto; /* Set height to auto */
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px; /* Adjust top position */
+  right: 50px; /* Adjust right position */
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(34, 34, 34);
+
+}
+
+.form {
+  width: 450px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  background-color: rgb(204, 204, 231);
+}
+
+.form-content {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 0; 
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 700;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.form-control {
+  display: block;  /* Make form controls take full width */
+  width: calc(100% - 20px);  /* Adjust width to account for margin */
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;  /* Add some space between each control */
+  height: 30px;
+  box-sizing: border-box;  /* Ensure padding and border are included in the width */
+}
+
+.btn{
+  display: block;  /* Make form controls take full width */
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;  /* Add some space between each control */
+  height: 30px;
+  background-color: #637dd1 ;
+  box-sizing: border-box;  /* Ensure padding and border are included in the width */
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.forgot-password{
+  text-align: right;
+  font-size: 14px;
+  padding-bottom: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.need-to-register, .already-have-account {
+  font-size: 14px;
+  color: #7f7d7d;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  display: inline-block;
+}

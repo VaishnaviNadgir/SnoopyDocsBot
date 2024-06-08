@@ -1,0 +1,251 @@
+.square-container {
+  width: 800px;
+  height: 520px;
+  background-color: #aaa6dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-left: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.curved-container {
+  width: 500px;
+  height: 130px;
+  background-color: rgb(219, 224, 241);
+  border-radius: 20px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 350px;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+  width: 800px;
+  height: 360px;
+  /* background-color: #aaa6dd; */
+  background-color: rgba(173, 162, 204, 0.1); /* Set the background to be transparent */
+  flex-direction: column; /* Ensure content is stacked vertically */
+  justify-content: flex-start; /* Align items to the top of the container */
+  align-items: center;
+  position: fixed;
+  margin-top: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-header {
+  display: flex;
+  align-items: center;
+}
+
+.upload-icon {
+  margin-left: -180px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.curved-container h2{
+  font-size: 25px;
+  margin-left: 150px;
+  font-style: italic; /* Set font style to italic */
+}
+
+.curved-container h6{
+  font-size: 12px;
+  margin-top: -10px;
+  margin-left: 130px;
+  margin-bottom: 20px;
+  font-style: italic; /* Set font style to italic */
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.file-info {
+  margin-top: 0px;
+  font-size: 14px;
+  color: #333;
+}
+
+.file-input-box {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #8d8b8b;
+}
+
+button {
+  margin-top: 310px;
+  margin-left: 520px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #2e5986;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  position: fixed;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.files-button {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 140px;
+  margin-right: 670px;
+}
+
+
+.uploaded-files-container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.uploaded-files .file-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%; 
+}
+
+.file-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+
+.file-card {
+  background-color: #c7c6eb;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(45% - 10px); 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-card p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1; /* Allow the file name to grow and shrink within the file card */
+}
+
+.file-icons {
+  display: flex;
+}
+
+.file-icons .view-icon,
+.file-icons .delete-icon {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #313131;
+  font-size: 14px;
+}
+
+.file-icons .view-icon:hover,
+.file-icons .delete-icon:hover {
+  color: #555;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 230px; /* Adjusted position to bottom */
+  width: 800px; /* Set width to match main-container */
+}
+
+/* Adjusted the margin-left for the left-button */
+.left-button {
+  background: #8d8b8b;
+  width: 50px;
+  height: 20px;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  top: -78px; /* Adjusted position to bottom */
+  font-size: 16px;
+  margin-left: -150px; /* Adjusted margin-right for consistent spacing */
+}
+
+/* Adjusted the margin-right for the right-button */
+.right-button {
+  background: #8d8b8b;
+  width: 50px;
+  height: 20px;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  top: -78px; /* Adjusted position to bottom */
+  font-size: 16px;
+  margin-left: 150px; /* Adjusted margin-right for consistent spacing */
+}
+
+.btn{
+  width: 80px;
+  font-size: large;
+  margin-right: 70px;
+  margin-bottom: 80px;
+  background-color: #aaa6dd;
+  color: black;
+  position: fixed;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px #aaa6dd(0, 0, 0, 0.1);
+}
+
+.btn:hover{
+  background-color: #aaa6dd;
+}
+
+.file-count {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #333;
+}

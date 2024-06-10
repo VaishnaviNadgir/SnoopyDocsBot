@@ -1,6 +1,6 @@
 .square-container {
   width: 800px;
-  height: 520px;
+  height: 540px;
   background-color: #aaa6dd;
   display: flex;
   justify-content: center;
@@ -22,15 +22,14 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin-bottom: 350px;
+  margin-bottom: 380px;
   margin-left: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-container {
   width: 800px;
-  height: 360px;
-  /* background-color: #aaa6dd; */
+  height: 380px;
   background-color: rgba(173, 162, 204, 0.1); /* Set the background to be transparent */
   flex-direction: column; /* Ensure content is stacked vertically */
   justify-content: flex-start; /* Align items to the top of the container */
@@ -48,7 +47,6 @@
 
 .upload-icon {
   margin-left: -180px;
-  cursor: pointer;
   font-size: 28px;
 }
 
@@ -56,6 +54,7 @@
   font-size: 25px;
   margin-left: 150px;
   font-style: italic; /* Set font style to italic */
+  cursor: default;
 }
 
 .curved-container h6{
@@ -64,6 +63,7 @@
   margin-left: 130px;
   margin-bottom: 20px;
   font-style: italic; /* Set font style to italic */
+  cursor: default;
 }
 
 .close-icon {
@@ -109,23 +109,48 @@ button {
   border-radius: 15px;
   background-color: #2e5986;
   color: white;
-  cursor: pointer;
   font-size: 15px;
   position: fixed;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
+.submit-button {
+  position: absolute;
+  top: 28px;
+  right: 0px; /* Adjust as needed */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e5986;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.pending-icon {
+  color: rgba(255, 0, 0, 0.712);
+  margin-left: 10px;
+}
+
+.success-icon {
+  color: green;
+  margin-left: 10px;
+}
+
+
 .files-button {
   display: flex;
   position: fixed;
+  cursor: default;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin-bottom: 140px;
+  margin-bottom: 160px;
   margin-right: 670px;
 }
 
@@ -156,32 +181,39 @@ button:hover {
 
 .file-card {
   background-color: #c7c6eb;
+  font-size: medium;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(45% - 10px); 
+  width: calc(45% - 20px); 
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .file-card p {
-  margin: 0;
+  margin-top: -5px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  flex-grow: 1; /* Allow the file name to grow and shrink within the file card */
+  flex-grow: 1; 
+  overflow: hidden;
 }
 
 .file-icons {
   display: flex;
 }
 
-.file-icons .view-icon,
+.file-icons .view-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #313131;
+  font-size: 14px;
+}
+
 .file-icons .delete-icon {
-  margin-left: 20px;
+  margin-left: 30px;
   cursor: pointer;
   color: #313131;
   font-size: 14px;
@@ -197,8 +229,9 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 230px; /* Adjusted position to bottom */
+  top: 240px; /* Adjusted position to bottom */
   width: 800px; /* Set width to match main-container */
+  cursor: default;
 }
 
 /* Adjusted the margin-left for the left-button */
@@ -209,7 +242,7 @@ button:hover {
   padding: 0px;
   border: none;
   cursor: pointer;
-  top: -78px; /* Adjusted position to bottom */
+  top: -68px; /* Adjusted position to bottom */
   font-size: 16px;
   margin-left: -150px; /* Adjusted margin-right for consistent spacing */
 }
@@ -222,7 +255,7 @@ button:hover {
   padding: 0px;
   border: none;
   cursor: pointer;
-  top: -78px; /* Adjusted position to bottom */
+  top: -68px; /* Adjusted position to bottom */
   font-size: 16px;
   margin-left: 150px; /* Adjusted margin-right for consistent spacing */
 }
@@ -248,4 +281,15 @@ button:hover {
   margin-left: 20px;
   font-size: 14px;
   color: #333;
+  cursor: default;
+}
+
+.file-status {
+  position: fixed;
+  margin-left: 0px;
+  margin-top: 30px;
+  font-size: 14px;
+  font-style: italic;
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+  flex-wrap: wrap; /* Allow the status to wrap to the next line */
 }

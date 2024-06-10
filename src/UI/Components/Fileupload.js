@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faEye, faTrash, faArrowLeft, faArrowRight, faFileUpload } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faEye, faTrash, faArrowLeft, faArrowRight, faFileUpload, faCircleCheck, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import './Fileupload.css';
 
 const Fileupload = ({ handleClose }) => {
   const [files, setFiles] = useState([]);
   const [error, setError] = useState('');
-  const [fileCount, setFileCount] = useState(0); // Add state for file count
+  const [fileCount, setFileCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const filesPerPage = 10;
+  const [filesInFirstPage, setFilesInFirstPage] = useState(false);
 
   const handleFileChange = (e) => {
     const selectedFiles = Array.from(e.target.files);
@@ -20,9 +21,9 @@ const Fileupload = ({ handleClose }) => {
     });
 
     if (invalidFiles.length === 0) {
-      const newFiles = [...files, ...selectedFiles];
-      setFiles(newFiles);
-      setFileCount(newFiles.length); // Update file count
+      const newFiles = selectedFiles.map(file => ({ file, status: 'Ready to upload' }));
+      setFiles(prevFiles => [...prevFiles, ...newFiles]);
+      setFileCount(prevCount => prevCount + newFiles.length);
       setError('');
     } else {
       setError('Please upload valid files.');
@@ -33,7 +34,7 @@ const Fileupload = ({ handleClose }) => {
     const updatedFiles = [...files];
     updatedFiles.splice(index, 1);
     setFiles(updatedFiles);
-    setFileCount(updatedFiles.length); // Update file count
+    setFileCount(prevCount => prevCount - 1);
   };
 
   const handleViewFile = (file) => {
@@ -46,6 +47,13 @@ const Fileupload = ({ handleClose }) => {
     if (files.length > 0) {
       // Handle file upload logic here
       console.log('Files uploaded:', files);
+      // Change status to 'Uploaded successfully'
+      const updatedFiles = files.map(file =>
+        file.status === 'Ready to upload'
+          ? { ...file, status: 'Uploaded successfully' }
+          : file
+      );
+      setFiles(updatedFiles);
     } else {
       setError('No files selected or invalid file types');
     }
@@ -54,15 +62,30 @@ const Fileupload = ({ handleClose }) => {
   const totalPages = Math.ceil(files.length / filesPerPage);
   const displayedFiles = files.slice((currentPage - 1) * filesPerPage, currentPage * filesPerPage);
 
+  const checkFilesInFirstPage = () => {
+    const filesInFirstPage = files.slice(0, filesPerPage);
+    return filesInFirstPage.length > 0;
+  };
+
+  useEffect(() => {
+    setFilesInFirstPage(checkFilesInFirstPage());
+  }, [currentPage, files]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(1);
+    }
+  }, [files]);
+
   return (
     <div className="square-container">
       <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={handleClose} />
       <div className="curved-container">
         <form onSubmit={handleSubmit}>
-        <div className="upload-header">
-      <h2>Upload Files!</h2>
-      <FontAwesomeIcon icon={faFileUpload} className="upload-icon" />
-    </div>
+          <div className="upload-header">
+            <h2>Upload Files!</h2>
+            <FontAwesomeIcon icon={faFileUpload} className="upload-icon" />
+          </div>
           <h6>Files supported: pdf, docx, txt, xlsx</h6>
           <div className="file-input-container">
             <div className="file-input-box">
@@ -71,7 +94,7 @@ const Fileupload = ({ handleClose }) => {
             </div>
           </div>
           {error && <p className="error">{error}</p>}
-          <button type="submit">Upload</button>
+          {filesInFirstPage && displayedFiles.length > 0}
         </form>
       </div>
       <div className="files-button">
@@ -82,11 +105,20 @@ const Fileupload = ({ handleClose }) => {
           {files.length > 0 && displayedFiles.length > 0 && (
             <div>
               <div className={displayedFiles.length > 2 ? 'file-cards grid-layout' : 'file-cards flex-layout'}>
-                {displayedFiles.map((file, index) => (
+                {displayedFiles.map((fileObj, index) => (
                   <div key={index} className="file-card">
-                    <p>{file.name}</p>
+                    <p>{fileObj.file ? fileObj.file.name : ''}</p>
+                    <div className="file-status">
+                      <span className="status">{fileObj.status}</span>
+                      {fileObj.status === 'Ready to upload' && (
+                        <FontAwesomeIcon icon={faCircleMinus} className="pending-icon" />
+                      )}
+                      {fileObj.status === 'Uploaded successfully' && (
+                        <FontAwesomeIcon icon={faCircleCheck} className="success-icon" />
+                      )}
+                    </div>
                     <div className="file-icons">
-                      <FontAwesomeIcon icon={faEye} className="view-icon" title="View" onClick={() => handleViewFile(file)} />
+                      <FontAwesomeIcon icon={faEye} className="view-icon" title="View" onClick={() => handleViewFile(fileObj.file)} />
                       <FontAwesomeIcon icon={faTrash} className="delete-icon" title="Delete" onClick={() => handleRemoveFile(index)} />
                     </div>
                   </div>
@@ -111,6 +143,7 @@ const Fileupload = ({ handleClose }) => {
                   </button>
                 </div>
               )}
+              <button type="submit" className='submit-button' onClick={handleSubmit}>Upload</button>
             </div>
           )}
         </div>

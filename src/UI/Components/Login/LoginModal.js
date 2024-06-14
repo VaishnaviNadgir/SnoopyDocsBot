@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "./LoginModal.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import "../Login/LoginModal.css";
 import { Button } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 
-const LoginModal = ({ handleClose, showSignup }) => {
+const LoginModal = ({ showSignup }) => {
   const [mode, setMode] = useState(showSignup ? "signUp" : "login");
 
   const titleOptions = {
@@ -24,9 +23,20 @@ const LoginModal = ({ handleClose, showSignup }) => {
     handleModeChange("login");
   };
 
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/');
+    window.alert("Logged in successfully!");
+  };
+
+  const handleSignup = () => {
+    navigate('/');
+    window.alert("Signed up successfully!");
+  };
+
   return (
     <div className="form-container">
-      <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={handleClose} />
       <form className="form">
         <div className="form-content">
           <h3 className="form-title">{titleOptions[mode]}</h3>
@@ -62,7 +72,7 @@ const LoginModal = ({ handleClose, showSignup }) => {
             </p>
             {mode === "login" && (
               <p className="need-to-register" onClick={handleRedirectToSignup}>
-                Need to <a href="#">register?</a>
+                New member?  <a href="#">register</a>
               </p>
             )}
             {mode === "signUp" && (
@@ -72,7 +82,7 @@ const LoginModal = ({ handleClose, showSignup }) => {
             )}
           </div>
           <div className="d-grid gap-2 mt-3">
-            <Button variant="light bg-color" type="submit">
+            <Button variant="light bg-color" type="submit" onClick={mode === "login" ? handleLogin : handleSignup}>
               {mode === "login" ? "Log In" : "Sign Up"}
             </Button>
           </div>

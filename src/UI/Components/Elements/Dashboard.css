@@ -1,13 +1,12 @@
-/* MainContent.css */
 .content-area {
-    margin-left: 270px; /* Offset for the sidebar */
+    margin-left: 270px;
     padding: 20px;
     height: 93.5vh;
-    background-color: #f0f0f0; /* Light background for the whole content area */
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
+    transition: transform 0.3s ease; 
 }
 
 .content-box {
@@ -24,7 +23,7 @@
 .content-box h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    margin-top: 70px;
+    margin-top: 150px;
 }
 
 .content-box h4 {

@@ -1,19 +1,20 @@
 .square-container {
-  width: 800px;
+  width: 900px;
   height: 540px;
   background-color: #aaa6dd;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-left: 100px;
+  margin-left: -100px;
+  margin-top: -20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .curved-container {
-  width: 500px;
-  height: 130px;
+  width: 550px;
+  height: 150px;
   background-color: rgb(219, 224, 241);
   border-radius: 20px;
   display: flex;
@@ -28,62 +29,59 @@
 }
 
 .main-container {
-  width: 800px;
-  height: 380px;
-  background-color: rgba(173, 162, 204, 0.1); /* Set the background to be transparent */
+  width: 900px;
+  height: 220px;
+  background-color: #aaa6dd;
   flex-direction: column; /* Ensure content is stacked vertically */
   justify-content: flex-start; /* Align items to the top of the container */
   align-items: center;
   position: fixed;
-  margin-top: 160px;
+  margin-top: 210px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.curved-container h6{
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 130px;
+  margin-bottom: -10px;
+  font-style: italic; 
+  cursor: default;
+} 
 
 .upload-header {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.upload-icon {
-  margin-left: -180px;
-  font-size: 28px;
-}
-
-.curved-container h2{
+.upload-header h2 {
   font-size: 25px;
-  margin-left: 150px;
-  font-style: italic; /* Set font style to italic */
-  cursor: default;
-}
-
-.curved-container h6{
-  font-size: 12px;
-  margin-top: -10px;
-  margin-left: 130px;
-  margin-bottom: 20px;
-  font-style: italic; /* Set font style to italic */
-  cursor: default;
-}
-
-.close-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.error {
-  color: red;
+  font-style: bolder;
+  margin-right: 50px;
   margin-top: 10px;
-  margin-left: 20px;
-  font-size: 12px;
+  font-style: italic;
+  cursor: default;
+  align-items: center;
+}
+
+.upload-icon{
+  font-size: 25px;
 }
 
 .file-info {
   margin-top: 0px;
   font-size: 14px;
   color: #333;
+}
+
+.file-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .file-input-box {
@@ -101,6 +99,19 @@ input[type="file"] {
   border: 1px solid #8d8b8b;
 }
 
+.error {
+  color: red;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.upload-message {
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
+
 button {
   margin-top: 310px;
   margin-left: 520px;
@@ -114,14 +125,14 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.submit-button:hover {
   background-color: #0056b3;
 }
 
 .submit-button {
-  position: absolute;
-  top: 28px;
-  right: 0px; /* Adjust as needed */
+  position: fixed;
+  bottom: 63px;
+  right: 120px; 
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -129,10 +140,24 @@ button:hover {
   color: white;
   cursor: pointer;
   font-size: 15px;
+  position: fixed;
+}
+
+.close-button {
+  position: fixed;
+  bottom: 63px;
+  right: 230px; 
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0a0a0a;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .pending-icon {
-  color: rgba(255, 0, 0, 0.712);
+  color: rgb(107, 107, 107);
   margin-left: 10px;
 }
 
@@ -140,20 +165,6 @@ button:hover {
   color: green;
   margin-left: 10px;
 }
-
-
-.files-button {
-  display: flex;
-  position: fixed;
-  cursor: default;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin-bottom: 160px;
-  margin-right: 670px;
-}
-
 
 .uploaded-files-container {
   width: 100%;
@@ -172,11 +183,11 @@ button:hover {
 }
 
 .file-cards {
-  margin-top: 30px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   flex-wrap: wrap;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .file-card {
@@ -187,7 +198,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(45% - 20px); 
+  width: calc(45% - 10px); 
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -229,7 +240,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 240px; /* Adjusted position to bottom */
+  top: 530px; /* Adjusted position to bottom */
   width: 800px; /* Set width to match main-container */
   cursor: default;
 }
@@ -242,7 +253,8 @@ button:hover {
   padding: 0px;
   border: none;
   cursor: pointer;
-  top: -68px; /* Adjusted position to bottom */
+  position: fixed;
+  bottom: 80px; /* Adjusted position to bottom */
   font-size: 16px;
   margin-left: -150px; /* Adjusted margin-right for consistent spacing */
 }
@@ -255,26 +267,12 @@ button:hover {
   padding: 0px;
   border: none;
   cursor: pointer;
-  top: -68px; /* Adjusted position to bottom */
+  position: fixed;
+  bottom: 80px; /* Adjusted position to bottom */
   font-size: 16px;
   margin-left: 150px; /* Adjusted margin-right for consistent spacing */
 }
 
-.btn{
-  width: 80px;
-  font-size: large;
-  margin-right: 70px;
-  margin-bottom: 80px;
-  background-color: #aaa6dd;
-  color: black;
-  position: fixed;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px #aaa6dd(0, 0, 0, 0.1);
-}
-
-.btn:hover{
-  background-color: #aaa6dd;
-}
 
 .file-count {
   margin-top: 10px;
@@ -290,6 +288,71 @@ button:hover {
   margin-top: 30px;
   font-size: 14px;
   font-style: italic;
-  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
   flex-wrap: wrap; /* Allow the status to wrap to the next line */
+}
+
+.filter-container {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 190px;
+  height: 70px;
+  padding: 50px;
+  background-color: #c7c6eb;
+  position: fixed; /* Change to sticky */
+  top: 0px; /* Stick to the top */
+  z-index: 1; /* Ensure it's above other content */
+}
+
+.filter-item {
+  display: flex;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-right: 0px; /* Add some spacing between the name and the square */
+}
+
+.square-text {
+  width: 220px;
+  height: 40px;
+  background-color: #abaaca; /* You can change the color */
+  margin-right: -30px;
+  margin-bottom: 25px;
+  border: none;
+}
+
+.title{
+  margin-right: 5px;
+}
+
+.text {
+  margin-left: 0px; /* Adjust spacing between the icon and text */
+}
+
+.filter-button {
+  background-color: #2e5986; /* You can change the color */
+  color: white;
+  border: none;
+  margin-top: 60px;
+  margin-left: 725px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+.clear-button {
+  background-color: #2e5986; /* You can change the color */
+  color: white;
+  border: none;
+  margin-top: 60px;
+  margin-left: 600px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* You can change the color */
 }

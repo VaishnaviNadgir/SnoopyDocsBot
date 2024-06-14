@@ -1,17 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import './Sidebar.css'; // Import CSS for styling
+import React from 'react';
+import '../Elements/Sidebar.css'; // Import CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments, faProjectDiagram, faFileAlt, faUsers, faHistory, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import logo from '../Assets/Logo.jpg';
-import ToggleMode from './Togglemode';
+import { useNavigate } from 'react-router-dom';
+import logo from '../../Assets/Logo.jpg';
 
 
-const Sidebar = ({ darkMode, toggleTheme }) => {
+const Sidebar = () => {
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        navigate(path);
+    };
+
+    const handleDocuments =() => {
+        handleNavigate('/documents');
+    }
+
+    const handleNewChat = () => {
+        const event = new Event('newChat');
+        window.dispatchEvent(event);
+        handleNavigate('/new chat');
+    };
+
+    const handleLogoClick = () => {
+        handleNavigate('/dashboard');
+    };
+
     return (
         <div className="sidebar">
-            <img src={logo} alt="Logo" className="sidebar-logo" /> {/* Add the logo */}
+            <img src={logo} alt="Logo" className="sidebar-logo" onClick={handleLogoClick}/> {/* Add the logo */}
             <ul>
-                <li>
+                <li onClick={handleNewChat}>
                     <FontAwesomeIcon icon={faComments} className="sidebar-icon" /> 
                     <span>New Chat</span>
                 </li>
@@ -19,7 +39,7 @@ const Sidebar = ({ darkMode, toggleTheme }) => {
                     <FontAwesomeIcon icon={faProjectDiagram} className="sidebar-icon" /> 
                     <span>Projects</span>
                 </li>
-                <li>
+                <li onClick={handleDocuments}>
                     <FontAwesomeIcon icon={faFileAlt} className="sidebar-icon" />
                     <span>Documents</span>
                 </li>
@@ -29,12 +49,11 @@ const Sidebar = ({ darkMode, toggleTheme }) => {
                 </li>
                 <li>
                     <FontAwesomeIcon icon={faHistory} className="sidebar-icon" />
-                    <span>History</span>
+                    <span>Chat History</span>
                 </li>
             </ul>
-            {/* <ToggleMode darkMode={darkMode} toggleTheme={toggleTheme} /> */}
         </div>
     );
-}
+};
 
 export default Sidebar;

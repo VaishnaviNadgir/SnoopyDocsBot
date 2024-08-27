@@ -13,7 +13,7 @@
 .form {
   width: 650px;
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 60px;
   border-radius: 20px;
   background-color: rgb(204, 204, 231);
@@ -77,4 +77,60 @@ label {
   cursor: pointer;
   text-align: left;
   display: inline-block;
+}
+
+/* Styles for error messages */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  font-size: 14px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #66696b; /* Adjust color as needed */
+}
+
+.role-buttons {
+  display: flex;
+  justify-content: space-between; /* Distribute space between buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+.user-button {
+  background-color: #007bff; /* Primary color for User button */
+  color: #fff; /* Text color for User button */
+  flex: 1; /* Ensure the button takes equal space */
+  text-align: center; /* Center text inside button */
+  margin-left: 250px;
+  margin-top: -20px;
+  width: 100px;
+}
+
+.admin-button {
+  background-color: #6c757d; /* Secondary color for Admin button */
+  color: #fff; /* Text color for Admin button */
+  flex: 1; /* Ensure the button takes equal space */
+  text-align: center; /* Center text inside button */
+  margin-left: 50px;
+  margin-top: -20px;
+  width: 100px;
+}
+
+/* Optional: Add hover effects */
+.user-button:hover {
+  background-color: #0056b3;
+}
+
+.admin-button:hover {
+  background-color: #5a6268;
 }

@@ -1,7 +1,7 @@
 .content-area {
     margin-left: 270px;
     padding: 20px;
-    height: 93.5vh;
+    height: 88.3vh;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -15,8 +15,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
     text-align: center;
-    margin-top: 70px;
-    height: 480px;
+    margin-top: 30px;
+    height: 500px;
     width: calc(100vw - 270px - 40px); /* Calculate width based on viewport width and sidebar width */
 }
 
@@ -30,14 +30,14 @@
     font-size: 15px;
     margin-bottom: 100px;
     color: #5a5959;
-    font-style: italic; /* Set font style to italic */
+    font-style: italic; 
 }
 
 
-.content-box .buttons {
+/* .content-box .buttons {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center; 
 }
 
 .content-box .buttons button {
@@ -45,8 +45,8 @@
     padding: 15px 15px;
     width: 150px;
     font-size: 18px;
-    font-weight: bold; /* Set font weight to bold */
-    font-style: italic; /* Set font style to italic */
+    font-weight: bold; 
+    font-style: italic; 
     cursor: pointer;
     border: none;
     background-color: #a69bd8;
@@ -62,39 +62,4 @@
 .login-clicked h1,
 .login-clicked h4 {
   transform: translateY(-150%);
-}
-
-/* Light Mode Styles */
-/* body.light-mode {
-    background-color: #ffffff;
-    color: #080808;
-}
-
-body.light-mode .content-area ul li:hover {
-    background-color: #9789e7;
-}
-
-body.light-mode .content-box ul li:hover {
-    background-color: #9789e7;
-} */
-
-/* Dark Mode Styles */
-/* body.dark-mode {
-    background-color: #333333;
-    color: #f0f0f0;
-}
-
-.dark-mode .content-area {
-    background-color: #0501167a;
-    color: #f0f0f0;
-}
-
-.dark-mode .content-box {
-    background-color: #0501167a;
-    color: #f0f0f0;
-}
-
-
-body.dark-mode .content-area ul li:hover {
-    background-color: #555555;
 } */

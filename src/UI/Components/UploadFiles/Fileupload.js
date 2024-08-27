@@ -208,7 +208,7 @@ const Fileupload = ({ show, handleClose }) => {
       </Modal.Body>
       <Modal.Footer>
         <button className='close-button' onClick={handleClose}>Close</button>
-        <button type="submit" className='submit-button' onClick={handleSubmit}>Upload</button>
+        <button type="submit" className='upload-button' onClick={handleSubmit}>Upload</button>
       </Modal.Footer>
     </Modal>
   );

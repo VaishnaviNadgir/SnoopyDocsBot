@@ -20,7 +20,6 @@
 
 .navbar-logo {
     height: 50px;
-    /* Adjust the logo height as needed */
     width: auto;
 }
 
@@ -44,18 +43,13 @@
 .profile-icon-container {
     margin-right: 60px;
     width: 40px;
-    /* Adjust the width as needed */
     height: 40px;
-    /* Adjust the height as needed */
     border-radius: 50%;
-    /* Makes the container a circle */
     background-color: #fff;
-    /* Background color for the circle */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* Ensure the icon doesn't overflow the container */
 }
 
 .profile-icon {
@@ -92,11 +86,29 @@
 }
 
 .dropdown-menu li:first-child {
-    border-top: none;
+    border: none;
 }
 
 .dropdown-menu li:hover {
     background-color: #d3d9e4;
+}
+
+.profile-item li{
+  font-size: 16px;
+  position: relative; /* Ensure sub-menu is positioned correctly */
+}
+
+.sub-menu ul li{
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position to the right of the parent item */
+  background-color: #d6ddec;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+  padding: 10px;
+  margin-left: 10px; /* Space between main menu and sub-menu */
 }
 
 .logout-icon {

@@ -5,6 +5,7 @@
     color: #080808;  /* Set default text color to white */
     height: 100vh;  /* Full height of the viewport */
     position: fixed;  /* Fixes the sidebar to the left */
+    cursor: auto;
 }
 
 .sidebar ul {
@@ -39,4 +40,21 @@
     width: 270px;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+.sidebar-footer {
+    padding: 10px 70px;
+    cursor: pointer;
+    display: flex;  /* Align items horizontally */
+    align-items: center;   /* Center items vertically */
+  }
+
+  .sidebar-footer:hover {
+    background-color: #9789e7;
+  }
+
+  .sidebar-footer .sidebar-icon {
+    margin-right: 15px;  /* Space between icon and text */
+    min-width: 25px;  /* Ensure icons have a fixed width */
+    text-align: center;   /* Center align icons */
 }

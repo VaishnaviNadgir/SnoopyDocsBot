@@ -125,22 +125,7 @@ const LoginModal = ({ showSignup }) => {
           <h3 className="form-title">{titleOptions[mode]}</h3>
           {mode === "login" && (
             <div className="form-group mt-3">
-              {/* <label htmlFor="role">Role</label> */}
               <div className="role-buttons">
-              {/* <Button
-                  variant={role === ROLES.USER ? "primary" : "secondary"}
-                  className="user-button"
-                  onClick={() => setRole(ROLES.USER)}
-                >
-                  User
-                </Button> */}
-                {/* <Button
-                  variant={role === ROLES.ADMIN ? "primary" : "secondary"}
-                  className="admin-button"
-                  onClick={() => setRole(ROLES.ADMIN)}
-                >
-                  Admin
-                </Button> */}
               </div>
             </div>
           )}

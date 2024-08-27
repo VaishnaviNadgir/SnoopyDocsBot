@@ -15,8 +15,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
     text-align: center;
-    margin-top: 30px;
-    height: 500px;
+    margin-top: 10px;
+    height: 520px;
     width: calc(100vw - 270px - 40px); /* Calculate width based on viewport width and sidebar width */
 }
 

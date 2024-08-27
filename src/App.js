@@ -7,8 +7,8 @@ import Fileupload from './UI/Components/UploadFiles/Fileupload';
 import LoginModal from './UI/Components/Login/LoginModal';
 import ChatInterface from './UI/Components/Chat/ChatInterface';
 import './App.css';
-import AdminDashboard from './UI/Components/Roles/AdminDashboard';
-import UserDashboard from './UI/Components/Roles/UserDashboard';
+import AdminLogin from './UI/Components/Roles/AdminLogin';
+import UserLogin from './UI/Components/Roles/UserLogin';
 
 const App = () => {
   // const [userRole, setUserRole] = useState(null); // This should come from your authentication logic
@@ -24,9 +24,11 @@ const App = () => {
           <Route path="/documents" element={<Fileupload />} />                    
           <Route path="/LoginModal" element={<LoginModal />} />
           <Route path="/new chat" element={<ChatInterface />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/user-login" element={<UserLogin />} />
           {/* <Route path="/login" element={<LoginModal showSignup={false} setUserRole={setUserRole} />} />
-        <Route path="/admin-dashboard" element={userRole === ROLES.ADMIN ? <AdminDashboard /> : <Navigate to="/login" />} />
-        <Route path="/" element={userRole === ROLES.USER ? <UserDashboard /> : <Navigate to="/login" />} /> */}
+        <Route path="/admin-dashboard" element={userRole === ROLES.ADMIN ? <AdminLogin /> : <Navigate to="/login" />} />
+        <Route path="/" element={userRole === ROLES.USER ? <UserLogin /> : <Navigate to="/login" />} /> */}
         </Routes>
       </div>
     </Router>

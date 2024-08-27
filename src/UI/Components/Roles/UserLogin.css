@@ -1,0 +1,97 @@
+.modal-content {
+  display: flex;
+  justify-content: center;
+  position: absolute; /* Position the form-container relative to the content-area */
+  top: 300px; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-25%, -50%); /* Center both horizontally and vertically */
+  height: auto;
+  width: 500px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  background-color: rgb(204, 204, 231);
+}
+
+.modal-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-left: 130px;
+}
+
+.form-label {
+  font-size: 16px; /* Reduced font size */
+  margin-bottom: 5px; /* Reduced bottom margin */
+  font-weight: 600; /* Keep label bold */
+  color: #333; /* Label color */
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px; /* Reduced padding */
+  font-size: 84px;
+  margin-top: 5px; /* Reduced top margin */
+  margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  font-size: 16px;
+  right: 15px;
+  top: 80%;
+  cursor: pointer;
+  color: #666;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.btn {
+  background-color: #6a7fc5;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  width: 25%;
+  margin-left: 160px;
+}
+
+.btn:hover {
+  background-color: #5a6fad;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 20px; /* Reduced padding */
+  font-size: 16px;
+  margin-top: 5px; /* Reduced top margin */
+  margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+.form-control:focus {
+  border-color: #6a7fc5;
+  box-shadow: 0 0 0 0.2rem rgba(106, 127, 197, 0.25);
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.modal-body {
+  padding-bottom: 20px;
+}

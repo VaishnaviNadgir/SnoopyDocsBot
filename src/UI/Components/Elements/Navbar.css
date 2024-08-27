@@ -93,22 +93,24 @@
     background-color: #d3d9e4;
 }
 
-.profile-item li{
-  font-size: 16px;
+.profile-item{
+  font-size: 17px;
   position: relative; /* Ensure sub-menu is positioned correctly */
+  padding: 10px;
 }
 
-.sub-menu ul li{
-  display: none; /* Initially hidden */
-  position: absolute;
-  top: 0;
-  left: 100%; /* Position to the right of the parent item */
-  background-color: #d6ddec;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 200px; /* Adjust width as needed */
+.admin-profile{
+  font-size: 15px;
+  position: relative; /* Ensure sub-menu is positioned correctly */
   padding: 10px;
-  margin-left: 10px; /* Space between main menu and sub-menu */
+  margin-left: 20px;
+}
+
+.user-profile{
+  font-size: 15px;
+  position: relative; /* Ensure sub-menu is positioned correctly */
+  padding: 10px;
+  margin-left: 20px;
 }
 
 .logout-icon {

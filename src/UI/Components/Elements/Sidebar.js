@@ -27,11 +27,11 @@ const Sidebar = () => {
         handleNavigate('/dashboard');
     };
 
-    const handleLogout = () => {
-        // Add your logout logic here
-        window.alert("Logged out successfully!");
-        handleNavigate('/dashboard');
-      };
+    // const handleLogout = () => {
+    //     // Add your logout logic here
+    //     window.alert("Logged out successfully!");
+    //     handleNavigate('/dashboard');
+    //   };
 
     return (
         <div className="sidebar">
@@ -41,27 +41,27 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faComments} className="sidebar-icon" />
                     <span>New Chat</span>
                 </li>
-                <li>
+                {/* <li>
                     <FontAwesomeIcon icon={faProjectDiagram} className="sidebar-icon" />
                     <span>Projects</span>
                 </li>
-                {/* <li onClick={handleDocuments}>
+                <li onClick={handleDocuments}>
                     <FontAwesomeIcon icon={faFileAlt} className="sidebar-icon" />
                     <span>Documents</span>
-                </li> */}
+                </li>
                 <li>
                     <FontAwesomeIcon icon={faUsers} className="sidebar-icon" />
                     <span>Community</span>
-                </li>
+                </li> */}
                 <li>
                     <FontAwesomeIcon icon={faHistory} className="sidebar-icon" />
                     <span>Chat History</span>
                 </li>
             </ul>
-            <div className="sidebar-footer" onClick={handleLogout}>
+            {/* <div className="sidebar-footer" onClick={handleLogout}>
                 <FontAwesomeIcon icon={faSignOutAlt} className="sidebar-icon" />
                 <span> Logout</span>
-            </div>
+            </div> */}
         </div>
     );
 };

@@ -11,7 +11,6 @@ import AdminLogin from './UI/Components/Roles/AdminLogin';
 import UserLogin from './UI/Components/Roles/UserLogin';
 
 const App = () => {
-  // const [userRole, setUserRole] = useState(null); // This should come from your authentication logic
 
   return (
     <Router>
@@ -26,9 +25,6 @@ const App = () => {
           <Route path="/new chat" element={<ChatInterface />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/user-login" element={<UserLogin />} />
-          {/* <Route path="/login" element={<LoginModal showSignup={false} setUserRole={setUserRole} />} />
-        <Route path="/admin-dashboard" element={userRole === ROLES.ADMIN ? <AdminLogin /> : <Navigate to="/login" />} />
-        <Route path="/" element={userRole === ROLES.USER ? <UserLogin /> : <Navigate to="/login" />} /> */}
         </Routes>
       </div>
     </Router>

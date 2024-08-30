@@ -41,7 +41,7 @@
 }
 
 .profile-icon-container {
-    margin-right: 60px;
+    margin-right: 30px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -93,10 +93,14 @@
     background-color: #d3d9e4;
 }
 
-.profile-item{
+.profile-item {
   font-size: 17px;
-  position: relative; /* Ensure sub-menu is positioned correctly */
   padding: 10px;
+  cursor: default;
+}
+
+.profile-item:hover {
+    background-color: transparent; /* No background change on hover */
 }
 
 .admin-profile{
@@ -115,4 +119,10 @@
 
 .logout-icon {
     margin-right: 10px;
+}
+
+.profile-role {
+    padding-right: 20px;
+    font-size: 18px;
+    color: #eeeded;
 }

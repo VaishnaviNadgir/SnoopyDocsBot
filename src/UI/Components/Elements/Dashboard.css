@@ -1,7 +1,7 @@
 .content-area {
     margin-left: 270px;
     padding: 20px;
-    height: 88.3vh;
+    height: 100vh;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -15,8 +15,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
     text-align: center;
-    margin-top: 10px;
-    height: 520px;
+    margin-top: 65px;
+    height: 530px;
     width: calc(100vw - 270px - 40px); /* Calculate width based on viewport width and sidebar width */
 }
 

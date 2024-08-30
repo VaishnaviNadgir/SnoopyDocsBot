@@ -95,14 +95,14 @@ const ChatInterface = () => {
           className="icon send-icon"
           onClick={handleSend}
         />
-        <div className="attachment-container" onClick={handleAttachmentClick}>
+        {/* <div className="attachment-container" onClick={handleAttachmentClick}>
           <FontAwesomeIcon
             icon={faPaperclip}
             className="icon attachment-icon"
           />
-        </div>
+        </div> */}
       </div>
-      <Fileupload show={showModal} handleClose={handleCloseModal} uploadedFiles={uploadedFiles} setUploadedFiles={setUploadedFiles} />
+      {/* <Fileupload show={showModal} handleClose={handleCloseModal} uploadedFiles={uploadedFiles} setUploadedFiles={setUploadedFiles} /> */}
     </div>
   );
 };

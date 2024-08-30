@@ -3,9 +3,56 @@
   flex-direction: column;
   margin-left: 270px;
   padding: 20px;
-  height: 88.3vh;
+  height: 100vh;
   box-sizing: border-box;
+  position: relative;
 }
+
+.message-box {
+  display: flex;
+  align-items: center;
+  background-color: #ccced1;
+  padding: 30px;
+  border-radius: 10px;
+  height: 60px;
+  position: sticky;
+  padding-bottom: 20px;
+}
+
+.message-box input {
+  flex-grow: 1;
+  width: 100%;
+  border: none;
+  padding: 8px;
+  border-radius: 15px;
+  background-color: #dadde2;  
+  outline: none;
+  margin-bottom: 10px;
+  margin-left: -10px;
+}
+
+.send-icon {
+  color: #2e5986;
+  margin-left: 10px;
+  font-size: 18px;
+  transform: rotate(15deg);
+  cursor: pointer;
+}
+
+/* .attachment-icon {
+  color: #888;
+  font-size: 18px;
+  margin-left: 290px;
+}
+
+.attachment-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  left: 10px;
+  bottom: 40px;
+} */
 
 .chatbox {
   flex-grow: 1;
@@ -44,50 +91,4 @@
   bottom: 10px;
   cursor: pointer;
   color: #948787;
-}
-
-.message-box {
-  display: flex;
-  align-items: center;
-  background-color: #ccced1;
-  padding: 30px;
-  border-radius: 10px;
-  height: 60px;
-  position: sticky;
-  padding-bottom: 20px;
-}
-
-.message-box input {
-  flex-grow: 1;
-  width: 100%;
-  border: none;
-  padding: 8px;
-  border-radius: 15px;
-  background-color: #dadde2;  
-  outline: none;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-
-.send-icon {
-  color: #2e5986;
-  margin-left: 10px;
-  font-size: 18px;
-  transform: rotate(15deg);
-  cursor: pointer;
-}
-
-.attachment-icon {
-  color: #888;
-  font-size: 18px;
-  margin-left: 290px;
-}
-
-.attachment-container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: fixed;
-  left: 10px;
-  bottom: 40px;
 }

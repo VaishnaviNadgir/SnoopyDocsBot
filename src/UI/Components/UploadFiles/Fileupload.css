@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-left: -100px;
-  margin-top: -20px;
+  margin-left: -200px;
+  margin-top: -250px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -36,7 +36,7 @@
   justify-content: flex-start; /* Align items to the top of the container */
   align-items: center;
   position: fixed;
-  margin-top: 210px;
+  margin-top: 220px;
   border-radius: 10px;
 }
 
@@ -59,7 +59,7 @@
 .upload-header h2 {
   font-size: 25px;
   font-style: bolder;
-  margin-right: 50px;
+  margin-right: 40px;
   margin-top: 10px;
   font-style: italic;
   cursor: default;
@@ -106,54 +106,74 @@ input[type="file"] {
   font-size: 12px;
 }
 
+.filter-container {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -55px;
+  height: 70px;
+  padding: 50px;
+  background-color: #c7c6eb;
+  position: fixed; /* Change to sticky */
+  top: 0px; /* Stick to the top */
+  z-index: 1; /* Ensure it's above other content */
+}
+
+.filter-item {
+  display: flex;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-right: 0px; /* Add some spacing between the name and the square */
+}
+
+.square-text {
+  width: 220px;
+  height: 40px;
+  background-color: #abaaca; /* You can change the color */
+  margin-right: -30px;
+  margin-bottom: 25px;
+  border: none;
+}
+
+.title{
+  margin-right: 2px;
+}
+
+.text {
+  margin-left: 0px; /* Adjust spacing between the icon and text */
+}
+
+.filter-button {
+  background-color: #2e5986; /* You can change the color */
+  color: white;
+  border: none;
+  margin-top: 60px;
+  margin-left: 725px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 15px;
+  width: 110px;
+}
+
+.clear-button {
+  background-color: #2e5986; /* You can change the color */
+  color: white;
+  border: none;
+  margin-top: 60px;
+  margin-left: 600px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 15px;
+  width: 110px;
+}
+
 .upload-message {
   color: green;
   margin-top: 10px;
   text-align: center;
-}
-
-button {
-  margin-top: 310px;
-  margin-left: 520px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 15px;
-  background-color: #2e5986;
-  color: white;
-  font-size: 15px;
-  position: fixed;
-  cursor: pointer;
-}
-
-.submit-button:hover {
-  background-color: #0056b3;
-}
-
-.upload-button {
-  position: fixed;
-  bottom: 30px;
-  right: 112px; 
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #2e5986;
-  color: white;
-  cursor: pointer;
-  font-size: 15px;
-  position: fixed;
-}
-
-.close-button {
-  position: fixed;
-  bottom: 30px;
-  right: 230px; 
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #0a0a0a;
-  color: white;
-  cursor: pointer;
-  font-size: 15px;
 }
 
 .pending-icon {
@@ -273,7 +293,6 @@ button {
   margin-left: 150px; /* Adjusted margin-right for consistent spacing */
 }
 
-
 .file-count {
   margin-top: 10px;
   margin-left: 20px;
@@ -291,68 +310,52 @@ button {
   flex-wrap: wrap; /* Allow the status to wrap to the next line */
 }
 
-.filter-container {
-  width: 900px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 190px;
-  height: 70px;
-  padding: 50px;
-  background-color: #c7c6eb;
-  position: fixed; /* Change to sticky */
-  top: 0px; /* Stick to the top */
-  z-index: 1; /* Ensure it's above other content */
-}
-
-.filter-item {
-  display: flex;
-  font-size: 16px;
-  margin-bottom: 10px;
-  margin-right: 0px; /* Add some spacing between the name and the square */
-}
-
-.square-text {
-  width: 220px;
-  height: 40px;
-  background-color: #abaaca; /* You can change the color */
-  margin-right: -30px;
-  margin-bottom: 25px;
-  border: none;
-}
-
-.title{
-  margin-right: 5px;
-}
-
-.text {
-  margin-left: 0px; /* Adjust spacing between the icon and text */
-}
-
-.filter-button {
-  background-color: #2e5986; /* You can change the color */
-  color: white;
-  border: none;
-  margin-top: 60px;
-  margin-left: 725px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 8px 15px;
-}
-
-.clear-button {
-  background-color: #2e5986; /* You can change the color */
-  color: white;
-  border: none;
-  margin-top: 60px;
-  margin-left: 600px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 8px 15px;
-}
-
 .search-button:hover {
-  background-color: #0056b3; /* You can change the color */
+  background-color: #d9dcdf; 
+}
+
+button {
+  margin-top: 310px;
+  margin-left: 520px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #222529;
+  color: white;
+  font-size: 15px;
+  position: fixed;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.upload-button {
+  position: fixed;
+  bottom: -194px;
+  right: -222px; 
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e5986;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  position: fixed;
+  width: 80px;
+}
+
+.close-button {
+  position: fixed;
+  bottom: -194px;
+  right: -100px; 
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0a0a0a;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  width: 80px;
 }
